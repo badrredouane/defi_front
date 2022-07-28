@@ -1,0 +1,116 @@
+.dashboard__area {
+    // height: calc(100vh - 70px);
+    margin-top: 64px !important;
+    width: 60%;
+    margin: 0 auto;
+
+    @media (max-width: 1199px) {
+        width: 70%;
+    }
+
+    @media (max-width: 991px) {
+        width: 80%;
+        margin-top: 24px !important;
+        padding-bottom: 80px;
+    }
+
+    @media (max-width: 767px) {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: clamp(24px, 3vw, 36px);
+        color: $c-second;
+        font-weight: 700;
+        padding-bottom: 16px;
+        margin: 0 0;
+        text-align: center;
+        padding-bottom: 24px;
+        margin-bottom: 0;
+    }
+
+    &--content {
+        background-color: #04081A;
+        border-radius: 16px;
+        padding: 24px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border: 1px solid $c-blue-light;
+        // align-items: ;
+
+        order: 1;
+
+        @media (max-width: 767px) {
+            order: 2;
+            text-align: center;
+        }
+
+
+        .item {
+            text-align: center;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding-bottom: 32px;
+
+            @media (max-width: 991px) {
+                width: 100%;
+                flex-wrap: wrap;
+            }
+
+            &:last-child {
+                padding-bottom: 0;
+
+            }
+        }
+
+        .switch {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 32px;
+            position: relative;
+            z-index: 0;
+
+            &::after {
+                content: '';
+                background-color: $c-blue-light;
+                height: 2px;
+                width: 95%;
+                border-radius: 2px;
+                position: absolute;
+                z-index: -1;
+            }
+
+            &:last-child {
+                padding-bottom: 0;
+
+            }
+        }
+
+    }
+
+    &--action {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        padding: 40px 0;
+
+        p {
+            font-size: clamp(12px, 3vw, 20px);
+            color: $c-white;
+            margin-bottom: 32px;
+        }
+    }
+
+
+
+}
+
+
+.infos--header {
+    margin: 24px 0;
+}

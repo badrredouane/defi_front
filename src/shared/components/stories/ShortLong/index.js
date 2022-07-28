@@ -1,0 +1,38 @@
+import PropTypes from "prop-types";
+import React, { useState } from "react";
+import { BiTrendingDown, BiTrendingUp } from "react-icons/bi";
+
+const ShortLong = ({ status }) => {
+  const [cls, setCls] = useState("c-green-linear");
+  return (
+    <div
+      className={`button--shortLong ${cls}`}
+      onClick={() =>
+        setCls((cls) =>
+          cls === "c-red-linear" ? "c-green-linear" : "c-red-linear"
+        )
+      }
+    >
+      <span className="label">
+        {cls === "c-green-linear" ? "Long" : "Short"}
+      </span>
+      <span className="icon">
+        {cls === "c-green-linear" ? (
+          <BiTrendingUp size={32} />
+        ) : (
+          <BiTrendingDown size={32} />
+        )}
+      </span>
+    </div>
+  );
+};
+
+ShortLong.propTypes = {
+  status: PropTypes.bool,
+};
+
+ShortLong.defaultProps = {
+  status: true,
+};
+
+export default ShortLong;

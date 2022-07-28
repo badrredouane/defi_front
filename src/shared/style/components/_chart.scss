@@ -1,0 +1,12 @@
+.chart--area {
+    margin-bottom: 24px;
+
+    
+    &--content {
+        background-color: $c-dark-2;
+        border: 1px solid $c-blue-light;
+        border-radius: 8px;
+        padding: 8px;
+        height: 400px;
+    }
+}

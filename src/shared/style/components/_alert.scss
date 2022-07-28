@@ -1,0 +1,33 @@
+.alert--wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    padding: 8px 16px;
+    border-radius: 4px;
+
+    .icon {
+        display: flex;
+        align-items: center;
+        margin-right: 8px;
+    }
+
+    .text {
+        font-size: clamp(12px, 3vw, 16px);
+        color: $c-white;
+    }
+    
+}
+
+.alert--color--danger {
+    background-color: $c-red-linear;
+}
+.alert--color--success { 
+    background-color: $c-green-linear;
+}
+.alert--color--info {
+    background-color: $c-forth;
+}
+.alert--color--warning {
+    background-color: $c-orange;
+}

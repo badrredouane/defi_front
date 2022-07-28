@@ -1,0 +1,67 @@
+//Setup
+@import "partials/variables";
+@import "partials/spacing";
+
+//Base styles
+@import "base/base";
+
+//Component Styles
+@import "components/layout";
+@import "components/header";
+@import "components/button";
+@import "components/input";
+@import "components/description";
+@import "components/box";
+@import "components/chart";
+@import "components/tab";
+@import "components/alert";
+@import "components/table";
+@import "components/modal";
+@import "components/statistics";
+@import "components/validator";
+
+
+// Pages Style
+@import "screens/dashboard";
+
+// Carousel Gallery
+
+
+
+
+
+
+
+// SCROLL
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba($c-main, .4);
+  border: 0px none #ffffff;
+}
+// ::-webkit-scrollbar-thumb:hover {
+//   background: #ffffff;
+// }
+::-webkit-scrollbar-thumb:active {
+  background: rgba($c-main, .4);
+}
+::-webkit-scrollbar-track {
+  background: $c-black;
+  border: 0px none #ffffff;
+}
+// ::-webkit-scrollbar-track:hover {
+//   background: #1A2B48;
+// }
+::-webkit-scrollbar-track:active {
+  background: rgba($c-main, .4);
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}

@@ -1,0 +1,229 @@
+.input--transparent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    input {
+        border: none;
+        outline: none;
+        background-color: transparent;
+        width: 85%;
+        padding-left: 0;
+        &:focus {
+            box-shadow: none;
+        }
+        font-size: clamp(16px,3vw, 18px);
+        font-weight: 700;
+        color: $c-gray-light;
+
+        &::placeholder {
+            font-size: 18px;
+            font-weight: 500;
+            color: $c-gray;
+        }
+    }
+
+    span {
+        padding-top: 4px;
+        padding-left: 16px;
+        color: $c-gray-light;
+    }
+
+}
+
+.input--group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    @media (max-width: 991px) {
+        width: 100%;
+    }
+
+    label {
+        padding-left: 24px;
+        margin-bottom: 8px;
+        font-size: 14px;
+        color: $c-forth;
+    }
+
+    &--content {
+        background-color: $c-black;
+        border: 1px solid $c-blue-light;
+        padding: 12px 8px;
+        border-radius: 8px;
+
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
+        align-items: flex-start;
+        @media (max-width: 991px) {
+            width: 100%;
+        }
+        input {
+            border: none;
+            outline: none;
+            &:focus {
+                box-shadow: none;
+            }
+            font-size: 32px;
+            font-weight: 700;
+            color: $c-white;
+
+            &::placeholder {
+                font-size: 32px;
+                font-weight: 700;
+                color: $c-gray;
+            }
+        }
+    
+        span {
+            padding-top: 4px;
+            padding-left: 16px;
+            color: $c-gray;
+        }
+    }
+
+   
+
+}
+
+
+.input--search {
+    .ant-input {
+        background-color: $c-black;
+        border: 1px solid $c-blue-light;
+        border-radius: 8px;
+        height: 50px;
+
+        &::placeholder {
+            font-size: 16px;
+            font-weight: 500;
+            color: $c-gray;
+        }
+
+        &:focus,&:hover {
+            border: 1px solid $c-blue-light;
+            border-right: 0;
+        }
+    }
+
+    .ant-input-group-addon,.ant-btn {
+        background-color: $c-black;
+        color: $c-gray;
+        border: 1px solid $c-blue-light;
+        border-left: none;
+        border-top-right-radius: 8px !important;
+        border-bottom-right-radius: 8px !important;
+        height: 50px;
+        width: 50px;
+
+        .anticon {
+            color: $c-gray;
+        }
+    }
+}
+
+.select--group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    @media (max-width: 991px) {
+        width: 100%;
+        padding-top: 24px;
+    }
+
+    label {
+        padding-left: 24px;
+        margin-bottom: 8px;
+        font-size: 14px;
+        color: $c-gray;
+    }
+
+    &--content {
+     
+
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
+        align-items: flex-start;
+        @media (max-width: 991px) {
+            width: 100%;
+        }
+        .select {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            background-color: $c-black;
+            border: 1px solid $c-blue-light;
+            padding: 12px 8px;
+            border-radius: 8px;
+            min-width: 300px;
+            width: 100%;
+            cursor: pointer;
+            .left {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                font-size: 16px;
+                font-weight: 600;
+                color: $c-white;
+               
+    
+                img {
+                    height: 20px;
+                    margin-right: 8px;
+                }
+                span {
+                    margin-bottom: 0;
+                }
+            }
+            svg {
+               color: $c-gray; 
+            }
+           
+
+           
+            
+
+        }
+    
+        .balance {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 8px;
+            padding-left: 24px;
+            padding-right: 24px;
+            width: 100%;
+
+            span {
+                color: $c-gray;
+            }
+
+           
+        }
+    }
+
+   
+
+}
+
+
+.switch--area {
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $c-blue-light;
+}
+
+
+.custom--select {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+}

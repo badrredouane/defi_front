@@ -1,0 +1,133 @@
+.header__area {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  // padding: 12px 0;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  background-color: $c-black;
+  z-index: 9;
+
+  .logo {
+    img {
+      height: 30px;
+    }
+  }
+
+
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &--left {
+    display: flex;
+    align-items: center;
+    &--menu {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 16px;
+      align-items: center;
+      list-style: none;
+      padding-left: 40px;
+      margin-bottom: 0;
+
+  
+      li {
+        text-align: center;
+        position: relative;
+  
+        i,
+        svg {
+          display: none;
+        }
+  
+        a {
+          text-decoration: none;
+          width: 100%;
+          line-height: 32px;
+          font-size: 16px;
+          text-align: center;
+          font-weight: 500;
+          color: $c-white;
+  
+          &:hover {
+            text-decoration: none;
+          }
+        }
+  
+  
+        .active,
+        &:hover {
+          color: rgba($c-second, 1);
+        }
+      }
+  
+    }
+  
+  
+    @media screen and (max-width: 790px) {
+      &--menu {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background-color: #0d1539;
+        // box-shadow: 0 -1px 12px hsla($c-black, $c-black, 15%, 0.15);
+        width: 100%;
+        // height: 4rem;
+        // padding: 0 1rem;
+        padding: 0.5rem 1rem;
+        display: grid;
+        align-content: center;
+        border-radius: 1.25rem 1.25rem 0 0;
+        transition: .4s;
+        box-shadow: 0 -10px 12px rgba(0, 0, 0, 0.4);
+        z-index: 9;
+  
+        svg,
+        i {
+          display: block !important;
+          font-size: clamp(14px, 3vw, 18px)
+        }
+  
+        li {
+          a {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            line-height: 30px;
+            font-size: clamp(14px, 3vw, 18px)
+          }
+  
+        }
+      }
+    }
+  }
+
+  &--right {
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .log {
+      margin-left: 16px;
+
+      @media (max-width: 600px) {
+        margin-left: 8px;
+        &:last-child {
+          margin-left: 0;
+        }
+      }
+
+      &:last-child {
+        margin-left: 0;
+      }
+    }
+
+  }
+}
+

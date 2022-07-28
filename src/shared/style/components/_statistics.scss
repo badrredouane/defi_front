@@ -1,0 +1,29 @@
+.statistics--area {
+
+    &--head {
+        display: flex;
+        align-items: center;
+        color: $c-white;
+        padding-bottom: 8px;
+
+        i {
+            padding-right: 8px;
+            display: flex;
+        }
+
+        span {
+            font-size: clamp(14px, 3vw, 16px);
+            color: $c-gray-light;
+        }
+
+    }
+    &--body {
+        text-align: right;
+        h4 {
+            font-size: clamp(18px, 3vw, 24px);
+            color: $c-white;
+            margin-bottom: 0;
+            font-weight: 600;
+        }
+    }
+}

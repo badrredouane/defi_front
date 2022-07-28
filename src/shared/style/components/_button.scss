@@ -1,0 +1,388 @@
+@mixin transition(
+  $property: all,
+  $duration: 0.45s,
+  $ease: cubic-bezier(0.65, 0, 0.076, 1)
+) {
+  transition: $property $duration $ease;
+}
+
+.button {
+  display: inline-flex;
+  height: 44px;
+  padding: 0 24px;
+  text-transform: none;
+  text-decoration: none;
+  font-size: 0.8em;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 2px;
+  text-align: center;
+  cursor: pointer;
+
+  @media (max-width: 800px) {
+    padding: 0 20px;
+    height: 40px;
+  }
+
+  @media (max-width: 1399px) {
+    padding: 0 16px;
+    height: 40px;
+  }
+  
+}
+
+
+
+
+.primary {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 0 !important;
+  height: 50px;
+  background: #0d1539;
+  cursor: pointer;
+  border-radius: 8px;
+
+  a {
+    position: relative;
+    transition: all 0.45s ease-Out;
+    color: $c-white;
+    padding: 0 15px;
+    font-size: 14px;
+    min-width: 200px;
+    text-transform: none;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+ 
+
+    svg {
+      margin-right: 8px;
+    }
+  }
+
+  #circle {
+    width: 0%;
+    height: 0%;
+    opacity: 0;
+    line-height: 40px;
+    border-radius: 50%;
+    background: $c-main;
+    background-image: linear-gradient(to left, $c-third, $c-main);
+    position: absolute;
+    transition: all 0.5s ease-Out;
+    top: 20px;
+    left: 90px;
+    cursor: pointer;
+  }
+
+  &:hover #circle {
+    width: 200%;
+    height: 500%;
+    opacity: 1;
+    top: -70px;
+    left: -70px;
+  }
+
+  &:hover a,
+  &:hover button {
+    color: $c-white;
+  }
+}
+
+.large {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 0 !important;
+  height: 60px;
+  background-image: linear-gradient(to left, $c-third, $c-main);
+  cursor: pointer;
+  border-radius: 8px;
+
+  a {
+    position: relative;
+    transition: all 0.45s ease-Out;
+    color: $c-white;
+    padding: 0 32px;
+    font-size: 14px;
+    min-width: 400px;
+    text-transform: none;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  button {
+    position: relative;
+    transition: all 0.45s ease-Out;
+    color: $c-white;
+    font-size: 16px;
+    text-transform: none;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0 10px;
+    background-color: transparent;
+    border: none;
+  }
+
+  #circle {
+    width: 0%;
+    height: 0%;
+    opacity: 0;
+    line-height: 40px;
+    border-radius: 50%;
+    background: $c-main;
+    position: absolute;
+    transition: all 0.5s ease-Out;
+    top: 20px;
+    left: 90px;
+    cursor: pointer;
+  }
+
+  &:hover #circle {
+    width: 200%;
+    height: 500%;
+    opacity: 1;
+    top: -70px;
+    left: -70px;
+  }
+
+  &:hover a,
+  &:hover button {
+    color: $c-white;
+  }
+}
+
+
+
+.ellipsis--text {
+  text-overflow: ellipsis;
+  overflow: hidden ;
+  width: 120px; 
+  white-space: nowrap;
+
+  @media (max-width: 600px) {
+    width: 90px; 
+  }
+
+}
+
+.ellips--wrap {
+  width: 100%;
+  max-width: 180px;
+  white-space: nowrap
+}
+
+// With Icon
+
+.button--withIcon {
+  background-color: $c-dark;
+  width: fit-content;
+  height: 40px;
+  border: 1px solid $c-blue-light;
+  border-radius: 8px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $c-white;
+  cursor: pointer;
+
+
+  @media (max-width: 600px) {
+    padding: 0 8px;
+  }
+
+  .label {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .icon {
+    margin-right: 8px;
+    display: flex;
+
+    i {
+    }
+
+    img {
+      height: 24px;
+    }
+  }
+
+  &:hover {
+    background-color: $c-third;
+    border: 1px solid $c-forth;
+  }
+}
+
+// Short Long
+
+.button--shortLong {
+  height: 50px;
+  width: 100%;
+  border-radius: 4px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $c-white;
+  cursor: pointer;
+
+  .label {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .icon {
+    margin-left: 8px;
+    display: flex;
+
+    i {
+    }
+
+    img {
+      height: 24px;
+    }
+  }
+}
+
+.c-green-linear {
+  background-image: $c-green-linear;
+}
+
+.c-red-linear {
+  background-image: $c-red-linear;
+}
+
+// Submit Button
+
+  .button--submit {
+    /* padding: 8px 24px; */
+    border-radius: 6px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .btn--primary {
+    background: $c-main;
+    background-image: linear-gradient(to left, $c-third, $c-main);
+    transition: all 0.5s ease-Out;
+  }
+
+  .btn--second {
+    background: $c-main;
+    background-image: linear-gradient(to left, $c-dark-2, $c-dark);
+    transition: all 0.5s ease-Out;
+  }
+
+  .btn--green {
+    background-image: $c-green-linear;
+    transition: all 0.5s ease-Out;
+  }
+
+  .btn--danger {
+    background-image: $c-red-linear;
+    transition: all 0.5s ease-Out;
+  }
+
+  .btn--link {
+    background-color: transparent !important;
+    border-bottom: 1px solid $c-gray;
+  }
+
+  .btn--disabled {
+    background-image: linear-gradient(to left, $c-third, $c-main);
+    cursor: not-allowed;
+    color: white;
+    opacity: 0.4;
+  }
+
+  .btn--xsmall {
+    font-size: 14px;
+    height: auto !important;
+    padding: 0;
+    color: $c-gray !important;
+    border-radius: 0;
+    font-weight: 400;
+  }
+
+  .btn--small {
+    font-size: 14px;
+    height: 40px;
+    padding: 0 8px;
+  }
+
+  .btn--medium {
+    padding: 0 16px;
+    font-size: 16px;
+    height: 45px;
+  }
+
+  .btn--large {
+    padding: 0 24px;
+    font-size: 18px;
+    width: 100%;
+    height: 50px;
+  }
+
+  .btn--xlarge {
+    padding: 0 24px;
+    font-size: 18px;
+    width: 100%;
+    height: 60px;
+  }
+
+  .btn--max {
+    padding: 0px 32px;
+    font-size: 20px;
+    width: max-content;
+    height: 66px;
+  }
+
+  // Hover
+  .btn--primary:hover {
+    background: $c-main;
+    background-image: linear-gradient(to left, $c-main, $c-third);
+  }
+
+  .btn--second:hover  {
+    background: $c-main;
+    background-image: linear-gradient(to left, $c-third, $c-third);
+
+  }
+
+  .btn--green:hover  {
+    background-image: $c-green-linear;
+  }
+
+  .btn--danger:hover  {
+    background-image: $c-red-linear;
+  }
+
+
+.ant-spin-dot-item {
+  background-color: $c-white;
+}
